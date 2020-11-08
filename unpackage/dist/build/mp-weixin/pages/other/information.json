@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "信息完善",
+  "navigationBarBackgroundColor": "#E52129",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom",
+  "bounce": "none",
+  "usingComponents": {}
+}

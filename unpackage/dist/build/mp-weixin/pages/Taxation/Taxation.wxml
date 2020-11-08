@@ -1,0 +1,1 @@
+<view class="Taxa"><image src="../../static/image/star_k.png" mode></image><text class="TaxaTitle">税筹知识</text><text class="TaxaTitle2">以资本市场的内在发展规律为基准，充分发挥市场竞争机制，以市场化为运作手段推动发展；充分发挥资源优势，为客户提供专业化的市场人才、专业化的业务支持、专业化的服务。</text><view class="Hzhu"></view><address-router vue-id="858ee000-1" bind:__l="__l"></address-router><view class="flexCenter btn">提交</view></view>

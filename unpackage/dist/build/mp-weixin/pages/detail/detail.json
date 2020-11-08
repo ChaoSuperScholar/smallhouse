@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#E52129",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "alretcheck": "/components/alretcheck/alretcheck",
+    "pyh-rdtpicker": "/components/pyh-rdtpicker/pyh-rdtpicker"
+  }
+}

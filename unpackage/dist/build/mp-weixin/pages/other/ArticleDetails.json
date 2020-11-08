@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "文章详情",
+  "navigationBarBackgroundColor": "#E52129",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "address-router": "/components/address-router/address-router"
+  }
+}

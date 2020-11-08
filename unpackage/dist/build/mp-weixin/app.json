@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/service/service",
+    "pages/appointment/appointment",
+    "pages/other/release",
+    "pages/other/study",
+    "pages/other/order_details",
+    "pages/other/ArticleDetails",
+    "pages/other/information",
+    "pages/other/Collection",
+    "pages/other/order_detail",
+    "pages/other/Unpaid",
+    "pages/aboutUs/aboutUs",
+    "pages/detail/detail",
+    "pages/Taxation/Taxation",
+    "pages/park/park"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "租房",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#DF0023",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/image/home_0.png",
+        "selectedIconPath": "static/image/home.png"
+      },
+      {
+        "pagePath": "pages/park/park",
+        "text": "服务",
+        "iconPath": "static/image/service_0.png",
+        "selectedIconPath": "static/image/service.png"
+      },
+      {
+        "pagePath": "pages/appointment/appointment",
+        "text": "我的预约",
+        "iconPath": "static/image/yuyue_0.png",
+        "selectedIconPath": "static/image/yuyue.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "static/image/my_0.png",
+        "selectedIconPath": "static/image/my.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

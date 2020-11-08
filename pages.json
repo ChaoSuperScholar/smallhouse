@@ -1,0 +1,173 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom",
+				"bounce": "none"
+			}
+		},
+		{
+			"path": "pages/service/service",
+			"style": {
+				"navigationBarTitleText": "企业服务",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/appointment/appointment",
+			"style": {
+				"navigationBarTitleText": "我的预约",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/other/release",
+			"style": {
+				"navigationBarTitleText": "最新资讯",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/other/study",
+			"style": {
+				"navigationBarTitleText": "学习园地",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/other/order_details",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/other/ArticleDetails",
+			"style": {
+				"navigationBarTitleText": "文章详情",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/other/information",
+			"style": {
+				"navigationBarTitleText": "信息完善",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white",
+				"navigationStyle": "custom",
+				"bounce": "none"
+			}
+		},
+		{
+			"path": "pages/other/Collection",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/other/order_detail",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/other/Unpaid",
+			"style": {
+				"navigationBarTitleText": "待支付",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/aboutUs/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/Taxation/Taxation",
+			"style": {
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "税筹"
+			}
+		}, {
+			"path": "pages/park/park",
+			"style": {
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "园区服务",
+				"onReachBottomDistance": 20
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarBackgroundColor": "#E52129",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "登陆",
+				"onReachBottomDistance": 20
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "租房",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#515151",
+		"selectedColor": "#DF0023",
+		"backgroundColor": "#fff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/image/home_0.png",
+				"selectedIconPath": "static/image/home.png"
+			},
+			{
+				"pagePath": "pages/aboutUs/aboutUs",
+				"text": "美圆多集团",
+				"iconPath": "static/image/service_0.png",
+				"selectedIconPath": "static/image/service.png"
+			},
+			{
+				"pagePath": "pages/other/release",
+				"text": "最新资讯",
+				"iconPath": "static/image/yuyue_0.png",
+				"selectedIconPath": "static/image/yuyue.png"
+			},
+			{
+				"pagePath": "pages/home/home",
+				"text": "我的",
+				"iconPath": "static/image/my_0.png",
+				"selectedIconPath": "static/image/my.png"
+			}
+		]
+	}
+}

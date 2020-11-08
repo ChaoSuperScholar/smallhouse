@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#E52129",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "税筹",
+  "usingComponents": {
+    "address-router": "/components/address-router/address-router"
+  }
+}
