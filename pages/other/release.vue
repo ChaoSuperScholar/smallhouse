@@ -102,7 +102,7 @@
 
 			.product {
 				margin-top: 10rpx;
-				font-size: 29rpx;
+				font-size: 28rpx;
 				font-family: Source Han Sans CN;
 				font-weight: 400;
 				color: #666666;
@@ -111,7 +111,7 @@
 				-webkit-box-orient: vertical; // 设置或检索伸缩盒对象的子元素的排列方式， 超出之后显示...
 				overflow: hidden; // 超出隐藏
 				line-height: 30rpx;
-				height: 90rpx;
+				height: 88rpx;
 			}
 
 			.time {

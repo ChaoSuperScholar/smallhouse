@@ -14,6 +14,11 @@
 				"navigationStyle": "custom",
 				"bounce": "none"
 			}
+		},{
+			"path": "pages/other/appointment_tow",
+			"style": {
+				"navigationBarTitleText": "我的预约"
+			}
 		},
 		{
 			"path": "pages/service/service",

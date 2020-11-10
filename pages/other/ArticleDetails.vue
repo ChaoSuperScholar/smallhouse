@@ -26,7 +26,9 @@
 					this.$request('applet.php?map=applet_information_details&suid=gaus0xcyuh&id='+this.id, {
 					}, res => {
 						if(res.ec == 200){
-							this.conent = res.data
+							this.conent = res.data;
+							const regex = new RegExp('<img', 'gi')
+							this.conent.content = this.conent.content.replace(regex, `<img style="max-width: 100%;"`)
 						}
 					})
 				},
@@ -44,10 +46,7 @@
 								url:'/pages/index/index'
 							})
 						},800)
-						
-						
 					})
-					
 				}
 			}
 		}

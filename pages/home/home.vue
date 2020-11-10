@@ -60,31 +60,31 @@
 				我的服务
 			</view>
 			<view class="choose_type">
-				<view class="item">
+				<view class="item" >
 					<image src="../../static/image/home1.png" mode=""></image>
 					<view class="name">
 						代账续约
 					</view>
 				</view>
-				<view class="item">
+				<view class="item" @click="goappointment(4)">
 					<image src="../../static/image/home2.png" mode=""></image>
 					<view class="name">
 						租赁续约
 					</view>
 				</view>
-				<view class="item">
+				<view class="item" @click="gorouter('/pages/park/park')">
 					<image src="../../static/image/home3.png" mode=""></image>
 					<view class="name">
 						园区续租
 					</view>
 				</view>
-				<view class="item">
+				<view class="item" @click="gorouter('/pages/other/appointment_tow')">
 					<image src="../../static/image/home4.png" mode=""></image>
 					<view class="name">
-						租赁续约
+						我的预约
 					</view>
 				</view>
-				<view class="item">
+				<view class="item" @click="gorouter('/pages/other/study')">
 					<image src="../../static/image/home5.png" mode=""></image>
 					<view class="name">
 						学习园地
@@ -157,6 +157,11 @@
 			
 		},
 		methods: {
+			gorouter(url){
+				uni.navigateTo({
+					url:url,
+				})
+			},
 			getMsg(){
 				this.$request('applet.php?map=applet_my_center',{},res=>{
 					if(res.ec == 200){
