@@ -158,8 +158,8 @@
 			{
 				"pagePath": "pages/aboutUs/aboutUs",
 				"text": "美圆多集团",
-				"iconPath": "static/image/service_0.png",
-				"selectedIconPath": "static/image/service.png"
+				"iconPath": "static/image/about_0.png",
+				"selectedIconPath": "static/image/about.png"
 			},
 			{
 				"pagePath": "pages/other/release",
