@@ -60,22 +60,28 @@
 				我的服务
 			</view>
 			<view class="choose_type">
-				<view class="item" @click="goappointment(4,'0')">
+				<view class="item" @click="goappointment(4,'1')">
 					<image src="../../static/image/home1.png" mode=""></image>
 					<view class="name">
 						代账续约
 					</view>
 				</view>
-				<view class="item" @click="goappointment(4,'1')">
+				<view class="item" @click="goappointment(4,'2')">
 					<image src="../../static/image/home2.png" mode=""></image>
 					<view class="name">
 						办公室续约
 					</view>
 				</view>
-				<view class="item" @click="goappointment(4,'2')">
+				<view class="item" @click="goappointment(4,'3')">
 					<image src="../../static/image/home3.png" mode=""></image>
 					<view class="name">
 						工位续约
+					</view>
+				</view>
+				<view class="item" @click="goappointment(4,'4')">
+					<image src="../../static/image/home3.png" mode=""></image>
+					<view class="name">
+						会员续约
 					</view>
 				</view>
 				<view class="item" @click="gorouter('/pages/other/appointment_tow')">

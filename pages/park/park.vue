@@ -45,8 +45,9 @@
 						会员权益：{{item.brief}}
 					</view>
 					<view>
-						￥{{item.price}}元/天
+						￥{{item.price}}元/天   <text style="padding-left: 20rpx;">库存：{{item.stock}}</text>
 					</view>
+					
 				</view>
 			</view>
 		</view>

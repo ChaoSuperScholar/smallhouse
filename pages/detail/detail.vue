@@ -13,9 +13,14 @@
 		</view>
 		<view class="detailDesc">
 			{{detail.brief}}
+			
 		</view>
+		
 		<view class="detailPrice flex">
 			<text class="h">¥</text>{{detail.price}}<text class="hui">/{{typ == 1 ? '天' : '年'}}</text>
+			<text v-if="detail.stock" style="font-size: 28rpx; padding-left: 30rpx;">
+				库存：{{detail.stock}}
+			</text>
 		</view>
 		<view class="detailCheck flex" @click="time_type">
 			<text>规格</text>
@@ -171,10 +176,10 @@
 				this.value = []
 				this.value.push(value)
 			 if (this.typ != 1) {
+				 this.idx = 1
 					if(this.detail.format.length==0){
 						this.gopay()
-					}else{
-						this.idx = 1
+						this.idx = 0
 					}
 				}
 			},

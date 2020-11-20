@@ -52,6 +52,9 @@
 		<view class="items">
 			订单编号：{{info.tid}} 
 		</view>
+		<view class="items" v-if="info.format_name">
+			规格：{{info.format_name}} 
+		</view>
 		<view class="items">
 			下单时间：{{info.create_time}}
 		</view>
