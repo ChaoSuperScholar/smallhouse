@@ -13,7 +13,7 @@ const pub = {
 				signType: res.data.signType,
 				timeStamp: res.data.timeStamp,
 				success: function(res) {
-					uni.switchTab({
+					uni.navigateTo({
 						url:'/pages/appointment/appointment'
 					})
 				},
