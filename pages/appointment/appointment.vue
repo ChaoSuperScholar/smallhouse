@@ -81,6 +81,7 @@
 				}],
 				tab_index:0,
 				page:0,
+				type:0,
 				list:[],
 				type: 'year-month',
 				tid:'',
@@ -93,6 +94,11 @@
 				this.tab_index = e.status;
 			}else{
 				this.tab_index = 0
+			}
+			if(e.type == 0){
+				this.type = 0;
+			}else if(e.type){
+				this.type = e.type
 			}
 		},
 		components:{
@@ -173,7 +179,7 @@
 			},
 			// 获取数据
 			getMsg(){
-				this.$request('applet.php?map=applet_service_trade_list&plum_session_applet='+this.plum_session_applet+'&page='+this.page+'&status='+this.tab_index,{
+				this.$request('applet.php?map=applet_service_trade_list&plum_session_applet='+this.plum_session_applet+'&page='+this.page+'&status='+this.tab_index+'&type='+this.type,{
 				}, res => {
 					if (res.ec == 200) {
 						let data = res.data.list;

@@ -60,22 +60,22 @@
 				我的服务
 			</view>
 			<view class="choose_type">
-				<view class="item" >
+				<view class="item" @click="goappointment(4,'0')">
 					<image src="../../static/image/home1.png" mode=""></image>
 					<view class="name">
 						代账续约
 					</view>
 				</view>
-				<view class="item" @click="goappointment(4)">
+				<view class="item" @click="goappointment(4,'1')">
 					<image src="../../static/image/home2.png" mode=""></image>
 					<view class="name">
-						租赁续约
+						办公室续约
 					</view>
 				</view>
-				<view class="item" @click="gorouter('/pages/park/park')">
+				<view class="item" @click="goappointment(4,'2')">
 					<image src="../../static/image/home3.png" mode=""></image>
 					<view class="name">
-						园区续租
+						工位续约
 					</view>
 				</view>
 				<view class="item" @click="gorouter('/pages/other/appointment_tow')">
@@ -84,7 +84,7 @@
 						我的预约
 					</view>
 				</view>
-				<view class="item" @click="gorouter('/pages/other/study')">
+				<view class="item" @click="gostalk">
 					<image src="../../static/image/home5.png" mode=""></image>
 					<view class="name">
 						学习园地
@@ -174,6 +174,19 @@
 					url:'../detail/detail?typ=3'
 				})
 			},
+			gostalk(){
+					uni.navigateToMiniProgram({
+						appId: 'wx725f1e1923e4cb33',
+						path: 'pages/index/index',
+						success: res => {
+							// 打开成功
+							console.log('打开成功', res);
+						},
+						fail: err => {
+							console.log(err);
+						}
+					});
+			},
 			gopay(){
 				if(uni.getStorageSync('slient') == 1){
 					uni.navigateTo({
@@ -207,10 +220,9 @@
 					url:'/pages/other/information'
 				})
 			},
-			goappointment(index){
-				uni.setStorageSync('status', index);
+			goappointment(index,id){
 				uni.navigateTo({
-					url:'/pages/appointment/appointment?status='+index
+					url:'/pages/appointment/appointment?status='+index+'&type='+id
 				})
 			},
 			gologin(){

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="parkheader flex" @click="idx=!idx">
+		<!-- <view class="parkheader flex" @click="idx=!idx">
 			<view class="flexCenter">
 				地区
 				<image src="../../static/image/right.png" mode=""></image>
@@ -8,7 +8,7 @@
 			<view class="flexCenter">
 				{{!yqList||yqId===null?'园区名':yqList[yqId].name}}
 			</view>
-		</view>
+		</view> -->
 		<view class="parkheaderpicker flex">
 			<view class="flexCenter" @click="change(1)">
 				<image src="../../static/image/Station.png" mode=""></image>
@@ -50,7 +50,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="fixed" @click="idx=!idx" v-show="idx">
+		<!-- <view class="fixed" @click="idx=!idx" v-show="idx">
 			<view class="whitebac">
 				<view class="parkheader flex">
 					<view class="flexCenter">
@@ -93,6 +93,7 @@
 				</view>
 			</view>
 		</view>
+	 -->
 	</view>
 </template>
 
@@ -112,23 +113,24 @@
 				page: 0
 			};
 		},
-		onLoad() {
+		onLoad(e) {
 			var _this = this
-			uni.getStorage({
-				key: 'applet_get_area',
-				success(res) {
-					_this.area = res.data
-				},
-				fail() {
-					_this.$request('applet.php?map=applet_get_area', {}, res => {
-						_this.area = res.pro;
-						uni.setStorage({
-							key: 'applet_get_area',
-							data: res.pro
-						})
-					})
-				}
-			})
+			this.area_id = e.id
+			// uni.getStorage({
+			// 	key: 'applet_get_area',
+			// 	success(res) {
+			// 		_this.area = res.data
+			// 	},
+			// 	fail() {
+			// 		_this.$request('applet.php?map=applet_get_area', {}, res => {
+			// 			_this.area = res.pro;
+			// 			uni.setStorage({
+			// 				key: 'applet_get_area',
+			// 				data: res.pro
+			// 			})
+			// 		})
+			// 	}
+			// })
 			this.getList()
 		},
 		onReachBottom() {
@@ -152,11 +154,18 @@
 				this.getList()
 			},
 			getList() {
+				// this.$request(
+				// 	`applet.php?map=applet_house_list&page=${this.page}&type=${this.type}&pro=${this.city===null?'':this.area[this.city].id}&city=${this.area2===null?'':this.area[this.city].children[this.area2].id}&area=${this.area_id===null?'':this.area[this.city].children[this.area2].children[this.area_id].id}&park=${this.yqId===null?'':this.yqList[this.yqId].id}`, {},
+				// 	res => {
+				// 		this.page === 0 ? this.List = res.data.list : this.List.push(...res.data.list)
+				// 	})
 				this.$request(
-					`applet.php?map=applet_house_list&page=${this.page}&type=${this.type}&pro=${this.city===null?'':this.area[this.city].id}&city=${this.area2===null?'':this.area[this.city].children[this.area2].id}&area=${this.area_id===null?'':this.area[this.city].children[this.area2].children[this.area_id].id}&park=${this.yqId===null?'':this.yqList[this.yqId].id}`, {},
+					`applet.php?map=applet_house_list&page=${this.page}&type=${this.type}&area_id=${this.area_id}`,
+					{},
 					res => {
-						this.page === 0 ? this.List = res.data.list : this.List.push(...res.data.list)
-					})
+						this.page === 0 ? (this.List = res.data.list) : this.List.push(...res.data.list);
+					}
+				);
 			},
 			yqClick(i) {
 				this.page = 0

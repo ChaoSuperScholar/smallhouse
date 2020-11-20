@@ -170,8 +170,12 @@
 			dateTimeChange(value) {
 				this.value = []
 				this.value.push(value)
-				if (this.typ != 1) {
-					this.idx = 1
+			 if (this.typ != 1) {
+					if(this.detail.format.length==0){
+						this.gopay()
+					}else{
+						this.idx = 1
+					}
 				}
 			},
 			showchange() {
@@ -197,11 +201,7 @@
 					return
 				}
 				url += `&start_time=${this.value[0]}&end_time=${this.value[1]}`
-				if (this.typ != 1) {
-					if (this.format_id === '') {
-						this.idx = 1
-						return
-					}
+				if (this.typ != 1 && this.format_id) {
 					url += `&format_id=${this.format_id}`
 				}
 				var _this = this

@@ -26,7 +26,7 @@
 	export default {
 		data() {
 			return {
-				page: 1,
+				page: 0,
 				list:[]
 			}
 		},
@@ -39,8 +39,7 @@
 		},
 		methods: {
 			getMsg() {
-				this.$request('applet.php?map=applet_information_list&suid=gaus0xcyuh&page=0', {
-					page: this.page
+				this.$request('applet.php?map=applet_information_list&suid=gaus0xcyuh&page='+this.page, {
 				}, res => {
 					if(res.ec == 200){
 						let data = res.data.list;
