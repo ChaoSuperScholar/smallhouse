@@ -152,7 +152,7 @@ export default {
 		}, 1000);
 	},
 	onLoad() {
-		this.$request('applet.php?map=applet_zf_index&suid=gaus0xcyuh&baseCode=101', {}, res => {
+		this.$request('applet.php?map=applet_zf_index&suid=gaus0xcyuh&baseCode=102', {}, res => {
 			this.indexData = res.data;
 			if(this.indexData.is_show){
 				this.indexMenus.push('融资服务') ;
