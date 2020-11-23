@@ -7,7 +7,7 @@
 					<text>{{cancelButtonText}}</text>
 				</view>
 				<view :class="[toolBarTitleClass]">
-					<text>{{toolBarTitle}}</text>
+					<text>{{datestring}}</text>
 				</view>
 				<view :class="[confirmButtonClass]" @click.stop="confirm">
 					<text>{{confirmButtonText}}</text>
@@ -109,7 +109,6 @@
 			return {
 				visible: false,
 				dateTime: [],
-				days: [],
 				indicatorStyleString: ''
 			}
 		},
@@ -133,6 +132,9 @@
 			},
 			months() {
 				return this.initTimeData(12, 1);
+			},
+			days(){
+				return this.initTimeData(30, 0)
 			},
 			isShowMonth() {
 				return this.type !== 'year' && this.type !== 'time' && this.type !== 'hour-minute';
