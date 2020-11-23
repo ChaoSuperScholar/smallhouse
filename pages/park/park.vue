@@ -161,7 +161,7 @@
 				// 		this.page === 0 ? this.List = res.data.list : this.List.push(...res.data.list)
 				// 	})
 				this.$request(
-					`applet.php?map=applet_house_list&page=${this.page}&type=${this.type}&area_id=${this.area_id}`,
+					`applet.php?map=applet_house_list&page=${this.page}&type=${this.type}&park=${this.area_id}`,
 					{},
 					res => {
 						this.page === 0 ? (this.List = res.data.list) : this.List.push(...res.data.list);

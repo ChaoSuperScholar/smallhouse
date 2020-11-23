@@ -93,8 +93,8 @@
 				<image v-for="(item,index) in indexData.zcsb" :key='index' :src="item.logo" mode="" @click="goArticle(item.id)"></image>
 			</view>
 		</view>
-		<view class="lines"></view>
-		<view class="two_block" id="id7">
+		<view class="lines" v-if="indexData.is_show"></view>
+		<view class="two_block" id="id7" v-if="indexData.is_show">
 			<view class="first_title">
 				<view class="lines">
 				</view>
@@ -106,8 +106,8 @@
 				<image v-for="(item,index) in indexData.zscq" :key='index' :src="item.logo" mode="" @click="qykb(item.id)"></image>
 			</view>
 		</view>
-		<view class="lines"></view>
-		<view class="three_block" id="id8">
+		<view class="lines" v-if="indexData.is_show"></view>
+		<view class="three_block" id="id8" v-if="indexData.is_show">
 			<view class="first_title">
 				<view class="lines">
 				</view>
@@ -119,7 +119,7 @@
 				<image v-for="(item,index) in indexData.rlzy" :key='index' :src="item.logo" mode="" @click="goArticle(item.id)"></image>
 			</view>
 		</view>
-		<view class="lines"></view>
+		<view class="lines" v-if="indexData.is_show"></view>
 		<view class="three_block" id="id9" v-if="indexData.is_show">
 			<view class="first_title">
 				<view class="lines">
@@ -139,7 +139,7 @@
 export default {
 	data() {
 		return {
-			indexMenus: ['企业开办','高企申报','园区招商','挂牌上市','税务筹划','政策申报','知识产权','人力资源'],
+			indexMenus: ['企业开办','高企申报','园区招商','挂牌上市','税务筹划','政策申报'],
 			indexData: null
 		};
 	},
@@ -152,11 +152,14 @@ export default {
 		}, 1000);
 	},
 	onLoad() {
-		this.$request('applet.php?map=applet_zf_index&suid=gaus0xcyuh&baseCode=102', {}, res => {
+		this.$request('applet.php?map=applet_zf_index&suid=gaus0xcyuh&baseCode=103', {}, res => {
 			this.indexData = res.data;
 			if(this.indexData.is_show){
+				this.indexMenus.push('知识产权') ;
+				this.indexMenus.push('人力资源') ;
 				this.indexMenus.push('融资服务') ;
 			}
+			
 		});
 		let that = this;
 		uni.login({

@@ -56,7 +56,7 @@
 				</view>
 			</view>
 		</view>
-		<date-time-picker ref='date-time' :indicatorStyle='indicatorStyle' :type='type' :datestring='dateString' @change='dateTimeChange' endYear='2100' :startYear='endtime' ></date-time-picker>
+		<date-time-picker ref='date-time' :indicatorStyle='indicatorStyle' :type='types' :datestring='dateString' @change='dateTimeChange' endYear='2100' :startYear='endtime' ></date-time-picker>
 	</view>
 </template>
 
@@ -83,9 +83,10 @@
 				page:0,
 				type:0,
 				list:[],
-				type: 'year-month',
+				types: 'date',
 				tid:'',
-				endtime:''
+				endtime:'',
+				dateString:''
 			}
 		},
 		onLoad(e) {	
@@ -135,14 +136,16 @@
 				this.getMsg();
 			},
 			xuzu(e,tid,time){
+				if(time.length >  4){
+					this.types = 'date'
+				}else{
+					this.types = 'year'
+				}
 				this.$refs['date-time'].show();
 				this.tid = tid;
 				this.endtime = time;
-				if(time.length >  4){
-					this.type = 'date'
-				}else{
-					this.type = 'year'
-				}
+				this.dateString = time;
+				
 			},
 			dateTimeChange(value) {
 				console.log(value)
